@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="frontend\**" />
+    <Content Remove="frontend\**" />
+    <EmbeddedResource Remove="frontend\**" />
+    <None Remove="frontend\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="appman.db" />
+    <None Remove="appman.db-shm" />
+    <None Remove="appman.db-wal" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Branca" Version="0.6.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.4" />
+  </ItemGroup>
+
+</Project>
